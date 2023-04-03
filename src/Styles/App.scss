@@ -1,0 +1,150 @@
+input[type="text"], textarea {
+    position: relative;
+}
+
+input[type="text"]::before,
+textarea::before {
+    content: attr(value);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    font-size: 16px;
+    color: #000;
+}
+
+input[type="text"]:focus::before,
+textarea:focus::before {
+    content: "";
+}
+
+input[type="text"]::after,
+textarea::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+input[type="text"]:focus::after,
+textarea:focus::after {
+    content: attr(value);
+    color: #000;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+input[type="text"]::after::before,
+textarea::after::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    background-color: #ffff00;
+}
+
+input[type="text"]:focus::after::before,
+textarea:focus::after::before {
+    content: attr(value);
+    color: #000;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 16px;
+    background-color: #ffff00;
+    pointer-events: none;
+}
+
+input[type="text"]::after::before {
+    content: attr(value);
+    color: #fff;
+    background-color: #000;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 16px;
+    z-index: 4;
+}
+
+input[type="text"]:focus::after::before {
+    content: "";
+}
+
+
+
+
+
+
+body {
+    background-color: #8080a8;
+
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+
+
+}
+.app h1{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    color: #1E3250;
+    margin-bottom: 20px;
+}
+
+
+.app-content{
+    border: 10px solid #591111;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 4);
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 480px;
+    background: #78bba4;
+}
+
+
+.btn {
+    padding: 10px 20px;
+    background-color: #6969af;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+&:hover {
+     background-color: #a274bd;
+     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+ }
+
+&:active {
+     background-color: #2e732d;
+     box-shadow: none;
+     transform: translateY(2px);
+ }
+}
+
+
+.btn-ed{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn-content{
+    display: flex;
+    flex-direction: column;
+
+}
+

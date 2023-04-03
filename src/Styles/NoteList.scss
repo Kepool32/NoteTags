@@ -1,0 +1,79 @@
+.Filt {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+}
+
+.sel {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #f8f8f8;
+    color: #333;
+
+&:hover {
+     cursor: pointer;
+     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+ }
+
+&:focus {
+     outline: none;
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15), 0px 0px 0px 3px #b3d4fc;
+ }
+
+& option {
+      background-color: white;
+  }
+}
+.Filt-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Filt-cont > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.Filt-cont > div > span {
+    margin-right: 10px;
+}
+
+.Filt-cont button {
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Filt-cont button:first-of-type {
+    background-color: #2d9cdb;
+}
+
+.Filt-cont button:first-of-type:hover {
+    background-color: #228be6;
+}
+
+.Filt-cont button:last-of-type {
+    background-color: #e74c3c;
+}
+
+.Filt-cont button:last-of-type:hover {
+    background-color: #f44336;
+}
+.FiltSect{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}

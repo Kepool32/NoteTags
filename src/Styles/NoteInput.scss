@@ -1,0 +1,73 @@
+
+
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.note-input {
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+    font-family: SWRomnc;
+    font-size: 26px;
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    resize: none;
+
+    &:focus {
+     outline: none;
+     box-shadow: 0px 0px 5px rgba(0, 0, 255, 1);
+ }
+}
+
+
+
+
+
+.note-save {
+    padding: 20px 40px;
+    font-size: 1.2rem;
+    background-color: #248c26;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+
+&:hover {
+     background-color: #085e08;
+     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+ }
+
+&:active {
+     background-color: #016203;
+     box-shadow: none;
+     transform: translateY(2px);
+ }
+}
+
+
+.taq {
+    display: inline-block;
+    color:white;
+    margin: 10px;
+    padding: 0.25em 0.5em;
+    border: 2px solid #76848d;
+    border-radius: 5px;
+    background-color: #5d5555;
+    font-family: 'Montserrat', sans-serif;
+    word-wrap: break-word;
+}
+
+
+
+
+

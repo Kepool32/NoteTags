@@ -1,0 +1,37 @@
+.tags{
+    display: flex;
+
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.spans {
+    background-color: #3f3f3f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    }
+
+.but {
+    background-color: #c0392b;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+&:hover {
+     background-color: #a5281e;
+ }
+
+}
