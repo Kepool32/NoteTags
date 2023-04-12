@@ -41,8 +41,10 @@ function deleteNoteFromLocalStorage(note: Note): void {
 
 function addTagToLocalStorage(tag: string): void {
     const data = getLocalStorageData();
-    data.tags.push(tag);
-    saveLocalStorageData(data);
+    if (!data.tags.includes(tag)) { // проверяем, есть ли такой тег в списке
+        data.tags.push(tag);
+        saveLocalStorageData(data);
+    }
 }
 
 function deleteTagFromLocalStorage(tag: string): void {

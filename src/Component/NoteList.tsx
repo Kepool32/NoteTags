@@ -57,7 +57,14 @@ const NoteList: React.FC<NoteListProps> = () => {
             <div className='Filt-cont' >
             {filteredNotes.map((note) => (
                 <div key={note.id}>
-                    <span>{note.content}</span>
+                   <span>
+                       {note.content.split(/(#[^\s]+)/g).map((word, index) => {
+                           if (word.startsWith('#')) {
+                            return <span key={index} className="hashtag">{word}</span>;
+                           }
+                                 return <span key={index}>{word}</span>;
+                            })}
+                    </span>
                     <button onClick={() => handleEditNote(note)}>Edit</button>
                     <button onClick={() => handleDeleteNote(note)}>Delete</button>
                 </div>
